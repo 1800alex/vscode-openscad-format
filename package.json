@@ -1,0 +1,96 @@
+{
+	"name": "openscad-format",
+	"displayName": "openscad-format",
+	"description": "Format OpenSCAD files with openscad-format",
+	"icon": "images/logo.png",
+	"version": "1.0.0",
+	"publisher": "N/A",
+	"license": "N/A",
+	"engines": {
+		"vscode": "^1.24.1"
+	},
+	"author": {
+		"email": "1800alex@gmail.com",
+		"name": "Alex Eaton"
+	},
+	"maintainers": [
+		{
+			"email": "1800alex@gmail.com",
+			"name": "Alex Eaton"
+		}
+	],
+	"galleryBanner": {
+		"color": "#2a4153",
+		"theme": "dark"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"keywords": [
+		"openscad-format",
+		"scad",
+		"OpenSCAD",
+		"format"
+	],
+	"activationEvents": [
+		"onLanguage:scad"
+	],
+	"main": "./src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.openscad-format",
+				"title": "Format document with openscad-format"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "resourceLangId == scad",
+					"command": "extension.openscad-format",
+					"group": "openscad-format@1"
+				}
+			],
+			"editor/title/context": [
+				{
+					"when": "resourceLangId == scad",
+					"command": "extension.openscad-format",
+					"group": "openscad-format@1"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "openscad-format configuration",
+			"properties": {
+				"openscadFormat.config": {
+					"type": "string",
+					"default": null,
+					"description": "Path with openscad-format config file"
+				},
+				"openscadFormat.executable": {
+					"type": "string",
+					"default": "openscad-format",
+					"description": "Where is openscad-format executable location"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"vscode": "^1.1.6",
+		"eslint": "^5.3.0",
+		"eslint-config-airbnb-base": "^13.2.0",
+		"eslint-plugin-import": "^2.18.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/1800alex/vscode-openscad-format.git"
+	},
+	"homepage": "https://github.com/1800alex/vscode-openscad-format/blob/master/README.md",
+	"dependencies": {
+		"path": "^0.12.7"
+	}
+}
