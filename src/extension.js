@@ -191,7 +191,8 @@ class OpenscadDocumentFormattingEditProvider {
 	formatDocument(document) {
 		if(document.isDirty) {
 			// Then save the document and make format
-			document.save().then(() => (this.doFormatDocument(document, null, null, null)));
+			document.save().then(() => ([]));
+			return([]);
 		}
 
 		return this.doFormatDocument(document, null, null, null);
