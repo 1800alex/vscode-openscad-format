@@ -4,7 +4,7 @@
 	"description": "Format OpenSCAD files with openscad-format",
 	"icon": "images/logo.png",
 	"version": "1.0.0",
-	"publisher": "N/A",
+	"publisher": "AlexEaton",
 	"license": "N/A",
 	"engines": {
 		"vscode": "^1.24.1"
