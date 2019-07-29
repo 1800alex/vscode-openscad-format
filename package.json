@@ -3,7 +3,7 @@
 	"displayName": "openscad-format",
 	"description": "Format OpenSCAD files with openscad-format",
 	"icon": "images/logo.png",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "AlexEaton",
 	"license": "N/A",
 	"engines": {
